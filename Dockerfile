@@ -22,7 +22,6 @@ RUN apt-get update && \
         wget \
         zip \
         unzip && \
-        locales && \
     rm -rf /var/lib/apt/lists/* && \
     wget https://getcomposer.org/composer.phar -O /usr/local/bin/composer && \
     chmod a+rx /usr/local/bin/composer
@@ -37,7 +36,8 @@ RUN version=$(php -r "echo PHP_MAJOR_VERSION.PHP_MINOR_VERSION;") \
 
 
 ## ----- Set LOCALE to UTF8
-RUN echo "fr_FR.UTF-8 UTF-8" > /etc/locale.gen && \
+RUN apt update && apt install -y locales && \
+    echo "fr_FR.UTF-8 UTF-8" > /etc/locale.gen && \
     locale-gen fr_FR.UTF-8 && \
     /usr/sbin/update-locale LANG=fr_FR.UTF-8
 
