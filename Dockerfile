@@ -63,7 +63,7 @@ RUN docker-php-ext-configure mysqli && \
     docker-php-ext-install gd && \
     docker-php-ext-install soap && \
     docker-php-ext-install intl && \
-    docker-php-ext-install mcrypt && \
+#    docker-php-ext-install mcrypt && \
     docker-php-ext-install gmp && \
     docker-php-ext-install mbstring && \
     docker-php-ext-install zip && \
