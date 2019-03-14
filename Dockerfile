@@ -4,6 +4,7 @@ RUN apt-get update && \
     apt-get install -y \
         libfreetype6-dev \
         libjpeg62-turbo-dev \
+        libmcrypt-dev \
         libgmp-dev \
         libxml2-dev \
         zlib1g-dev \
@@ -21,7 +22,7 @@ RUN apt-get update && \
         wget \
         zip \
         unzip && \
-        localles && \
+        locales && \
     rm -rf /var/lib/apt/lists/* && \
     wget https://getcomposer.org/composer.phar -O /usr/local/bin/composer && \
     chmod a+rx /usr/local/bin/composer
