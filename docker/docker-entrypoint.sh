@@ -81,8 +81,8 @@ fi
 
 # Install composer
 
-if [[ -f /var/www/composer.json ]]; then
-    cd /var/www
+if [[ -f /var/www/html/composer.json ]]; then
+    cd /var/www/html
     composer install --prefer-dist --no-progress --no-suggest --no-interaction --no-plugins --no-dev
     composer dump-autoload -o
     #bin/console doctrine:database:create  --no-interaction
