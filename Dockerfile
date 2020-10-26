@@ -69,7 +69,8 @@ RUN docker-php-ext-configure mysqli && \
     docker-php-ext-install zip && \
     docker-php-ext-install pcntl && \
     docker-php-ext-install ftp && \
-    docker-php-ext-install sockets
+    docker-php-ext-install sockets && \
+    docker-php-ext-install mongodb
 
 COPY docker/docker-entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
